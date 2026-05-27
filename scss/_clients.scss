@@ -1,0 +1,22 @@
+
+.clients_logo_area{
+	.clients_slider{
+		.item{
+			text-align: center;
+			img{
+				width: auto;
+				text-align: center;
+				display: block;
+				margin: auto;
+				line-height: 70px;
+				opacity: .5;
+				@include transition;
+			}
+			&:hover{
+				img{
+					opacity: 1;
+				} 
+			}
+		}
+	}
+}

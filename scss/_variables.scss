@@ -1,0 +1,68 @@
+$rob: 'Roboto', sans-serif;
+$play: 'Playfair Display', serif;
+
+$baseColor: #4dbf1c;
+$dip: #222222;
+$pfont: #777777; 
+
+$border-radius-sm: 8px;
+$border-radius-md: 12px;
+$border-radius-lg: 16px;
+$border-radius-xl: 20px;
+
+@import url('https:
+
+
+@mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s){
+    transition: $property $duration $animate $delay; 
+}
+
+
+@mixin rounded-with-points($radius: $border-radius-md, $point-size: 2px) {
+    border-radius: $radius;
+    position: relative;
+    overflow: visible;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: -$point-size;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 8px;
+        height: $point-size;
+        background: inherit;
+        clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -$point-size;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 8px;
+        height: $point-size;
+        background: inherit;
+        clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    }
+}
+
+
+@mixin rounded-smooth($radius: $border-radius-md) {
+    border-radius: $radius;
+    transition: border-radius 0.3s ease;
+}
+
+
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+
+
+

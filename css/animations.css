@@ -1,0 +1,145 @@
+
+
+
+.animate-fade-up,
+.animate-zoom-in,
+.animate-fade-in {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+
+#scroll-progress-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #1aa4e9, #0ca956);
+  
+  z-index: 9999;
+  transform-origin: left;
+  
+}
+
+
+
+
+.interactive-card {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, box-shadow;
+}
+
+.interactive-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+a,
+button,
+.main_btn,
+.main_btn2 {
+  transition: all 0.3s ease-in-out !important;
+}
+
+
+.img-reveal-zoom {
+  overflow: hidden;
+  position: relative;
+}
+
+.img-reveal-zoom img {
+  transform: scale(1.1);
+  
+}
+
+
+
+
+.courses_item,
+.course_item,
+.packages_item,
+.team_item {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+.courses_item img,
+.course_item img,
+.team_item img,
+.packages_item img {
+  border-radius: 12px 12px 0 0;
+}
+
+
+.team_img img.rounded-circle {
+  border-radius: 50%;
+}
+
+
+.about_inner .video_area img {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  
+}
+
+
+.courses_area,
+.packages_area {
+  background-color: #f8fbff;
+  
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  margin-top: 40px;
+  
+  margin-bottom: 40px;
+}
+
+
+.interactive-card {
+  border-radius: 12px;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  
+  .animate-fade-up,
+  .animate-zoom-in,
+  .animate-fade-in {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+}
